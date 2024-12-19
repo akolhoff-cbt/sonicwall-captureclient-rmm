@@ -16,28 +16,26 @@ Before starting the integration, make sure that the ConnectWise Automate agent i
 
 -   Download the files in the folder *CW Automate packaging* from the [repo](ConnectWise Automate\CW Automate packaging)
 
--   Import the xml configurations Open ConnectWise Automate, navigate to **Tools > Import > LT XML Expansion**, and import the below files from extracted folder
+-   Import the xml configurations Open ConnectWise Automate, navigate to **System > General > Import > XML Expansion**, and import the below files from extracted folder
     -   SonicWall Capture Client Endpoint Protection Install.xml 
     -   Computers-with-CC.xml
     -   Computers-without-CC.xml
 
--	Once the XML’s are imported, A new folder **Antinvirus -> SonicWall Capture Client** is created under Scripts which lists the client install script.
+-	Once the XML’s are imported, A new folder **Antivirus -> SonicWall Capture Client** is created under Scripts which lists the client install script.
 
 -   A couple of new search items will be added under search **Automation > Searches > AntiVirus Software** namely *Antivirus – Non SonicWall Capture Client Endpoints* and *Antivirus – SonicWall Capture Client Endpoints*.	
 
--   Next, navigate to **Tools > Import > SQL File**, and import the below SQL files from the extracted folder.
+-   Next, navigate to **System > General > Import > SQL File**, and import the below SQL files from the extracted folder.
     -   edf-tenantid.sql
     -   edf-version.sql
     -   VirusScan-defination.sql
-    When you import the script, the following updates are made in ConnectWise Automate.
+    When you import the script, the following updates are made in ConnectWise Automate:
 
--   You should be able to see the below 2 custom fields registered under **System > Configuration > Dashboard > Config**
+    -   You should be able to see the custom fields *SWCCtenantId* and *SWCCVersion* registered under **System > Configuration > Dashboard > Config**
+    -   You should be able to see a new tab *SonicWall Capture Client* and 2 custom fields when you right-click on **[client name] > open > Info**
+    -   You should be able to see the new virus definition for Capture Client registered under **System > Configuration > Dashboard > Config**
 
--   You should be able to see a new tab *SonicWall Capture Clien*t and 2 custom fields when you right-click on **client > open > Info**
-
--   You should be able to see the new virus definition for Capture Client registered under **System > Configuration > Dashboard > Config**
-
--   You must issue the following commands from Commands > Inventory to all the ConnectWise Automate clients:
+-   You must first issue the following commands from **Commands > Inventory** to all the ConnectWise Automate clients:
     -   Update Config
     -   Resend System info
     -   Resend Software Info LT
@@ -45,7 +43,7 @@ Before starting the integration, make sure that the ConnectWise Automate agent i
 ## Setting up Client
 
 This integration needs 2 inputs from the ConnectWise Automate admins the tenantId and the client version.
-To configure the above navigate to [client] > open > Info
+To configure the above navigate to **[client name] > open > Info**
 The *SWCCtenantId* can be found in the Capture Client console under **Management > Tenant Settings**
 The *SWCCVersion* can be found under **Management > Client Installers** based on the clients chosen.
 
