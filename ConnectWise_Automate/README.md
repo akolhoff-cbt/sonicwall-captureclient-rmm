@@ -43,8 +43,11 @@ Before starting the integration, make sure that the ConnectWise Automate agent i
 ## Setting up Client
 
 This integration needs 2 inputs from the ConnectWise Automate admins, the tenantId and the client version.
+
 To configure the above navigate to **[client name] > open > Info**
+
 The *SWCCtenantId* can be found in the Capture Client console under **Management > Tenant Settings**
+
 The *SWCCVersion* can be found under **Management > Client Installers** based on the clients chosen.
 
 
