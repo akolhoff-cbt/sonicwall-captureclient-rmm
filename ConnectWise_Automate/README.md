@@ -38,11 +38,11 @@ Before starting the integration, make sure that the ConnectWise Automate agent i
 -   You must first issue the following commands from **Commands > Inventory** to all the ConnectWise Automate clients:
     -   Update Config
     -   Resend System info
-    -   Resend Software Info LT
+    -   Resend Software
 
 ## Setting up Client
 
-This integration needs 2 inputs from the ConnectWise Automate admins the tenantId and the client version.
+This integration needs 2 inputs from the ConnectWise Automate admins, the tenantId and the client version.
 To configure the above navigate to **[client name] > open > Info**
 The *SWCCtenantId* can be found in the Capture Client console under **Management > Tenant Settings**
 The *SWCCVersion* can be found under **Management > Client Installers** based on the clients chosen.
